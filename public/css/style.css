@@ -1,4 +1,4 @@
-header, .project:not(:last-child) {
+/* header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -21,4 +21,45 @@ header, .project:not(:last-child) {
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
+} */
+:root {
+  --text-color: #FFFFFF;
+  --background-color-primary: #333333;
+  --background-color-secondary: #1E272E;
+  --background-color-tertiary: #000000;
+}
+
+#navBar{
+  background-color: var(--background-color-primary);
+  background-image: url(../img/Technology-Wallpaper.jpg);
+  image-resolution: 200px;
+  color: var(--text-color);
+}
+a{
+  color: var(--text-color);
+}
+.container{
+  background-color: var(--background-color-secondary);
+  color: var(--text-color);
+}
+.title{
+  background-color: var(--background-color-tertiary);
+}
+img{
+  height: 300px;
+  width: 300px;
+}
+/* .product-container{
+  width: 18rem;
+  height: 18rem;
+  margin: 100px;
+} */
+body{
+  background-color: var(--background-color-secondary);
+}
+ul{
+  list-style: none;
+}
+li{
+  color: var(--text-color);
 }
