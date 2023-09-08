@@ -46,5 +46,7 @@ app.use(routes);
 //   app.listen(PORT, () => console.log('Now listening'));
 // });
 app.listen(PORT, ()=>{
-  console.log('Now listening');
+  console.log(
+  `Now listening:Click this Link =>
+  http://localhost:${PORT}/`);
 })

@@ -31,6 +31,8 @@
 
 #navBar{
   background-color: var(--background-color-primary);
+  background-image: url(../img/Technology-Wallpaper.jpg);
+  image-resolution: 200px;
   color: var(--text-color);
 }
 a{
@@ -47,11 +49,11 @@ img{
   height: 300px;
   width: 300px;
 }
-.product-container{
+/* .product-container{
   width: 18rem;
   height: 18rem;
   margin: 100px;
-}
+} */
 body{
   background-color: var(--background-color-secondary);
 }
