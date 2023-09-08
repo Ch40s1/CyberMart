@@ -1,24 +1,42 @@
-<!-- Loop over each object in the projects array -->
-{{!-- {{#each projects as |project| }} --}}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{!-- {{{get_emoji}}} --}}
-      {{!-- <a href="/project/{{project.id}}">{{project.name}}</a> --}}
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      {{!-- <span class="dollar-amount">{{format_amount project.needed_funding}}</span> --}}
-      needed!
-    </p>
-    {{!-- <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p> --}}
+<main class="d-flex flex-wrap">
+<div class="product-container">
+  <img src="/img/Acer+Desktop.jpg"/>
+  <div class="d-flex flex-column align-items-center">
+    <ul>
+      <li>Acer Desktop</li>
+      <li>$300</li>
+    </ul>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{!-- {{project.description}} --}}
-    </p>
   </div>
 </div>
-{{!-- {{/each}} --}}
+<div class="product-container">
+  <img src="/img/AMIR-Gaming-Mouse.jpg"/>
+  <div class="d-flex flex-column align-items-center">
+    <ul>
+      <li>AMIR Gaming Mouse</li>
+      <li>$100</li>
+    </ul>
+  </div>
+  </div>
+</div>
+<div class="product-container">
+  <img src="/img/apple-vision.jpg"/>
+  <div class="d-flex flex-column align-items-center">
+    <ul>
+      <li>Apple Vision</li>
+      <li>$3000</li>
+    </ul>
+  </div>
+  </div>
+</div>
+<div class="product-container">
+  <img src="/img/gaming-keyboard.jpg">
+  <div class="d-flex flex-column align-items-center">
+    <ul>
+      <li>Gaming Keyboard</li>
+      <li>$150</li>
+    </ul>
+  </div>
+  </div>
+</div>
+</main>
