@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>CyberMart</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <link rel='stylesheet' href='/css/jass.css' />
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-  <body>
-    <header id="navBar" class="">
-        <nav class="d-flex justify-content-around align-items-center">
-            <h2>CyberMart</h2>
-            <ul class="d-flex gap-4 list-unstyled mt-3 ">
-                <a href="/" target="_self">Home</a>
-                 {{!-- {{#if logged_in}}
-            Welcome
-            {{user_name}}
-            |
-            <a href='/profile'>profile</a>
-            |
-            <button class='no-button' id='logout'>logout</button>
-          {{else}} --}}
-                <a href="/login" target="_self">Log In</a>
-                {{!-- {{/if}} --}}
-                <a>Profile</a>
-            </ul>
-               <!-- Render script for logged in users only -->
-    {{!-- {{#if logged_in}}
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>CyberMart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link rel='stylesheet' href='/css/jass.css' />
+  <link rel='stylesheet' href='/css/style.css' />
+</head>
+
+<body>
+  <header id="navBar" class="">
+    <nav class="d-flex justify-content-around align-items-center">
+      <h2>CyberMart</h2>
+      <ul class="d-flex gap-4 list-unstyled mt-3 ">
+          <a href="/" target="_self">Home</a>
+
+        {{#if logged_in}}
+        Hello
+         {{user_name}}
+        {{else}}
+        <a href="/login" target="_self">Log In</a>
+        {{/if}}
+
+        <a>Profile</a>
+      </ul>
+      <!-- Render script for logged in users only -->
+      {{!-- {{#if logged_in}}
       <script src='/js/logout.js'></script>
-    {{/if}} --}}
-        </nav>
-    </header>
-    {{{body}}}
+      {{/if}} --}}
+    </nav>
+  </header>
+  {{{body}}}
 
 </body>
 
