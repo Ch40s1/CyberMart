@@ -2,25 +2,25 @@
   {
     "name": "Acer Desktop",
     "price": "300",
-    "image-url": "/img/Acer+Desktop.jpg",
+    "image_url": "/img/Acer+Desktop.jpg",
     "description": "Lorem"
   },
   {
     "name": "AMIR Gaming mouse",
     "price": "100",
-    "image-url": "/img/AMIR-Gaming-Mouse.jpg",
+    "image_url": "/img/AMIR-Gaming-Mouse.jpg",
     "description": "Lorem"
   },
   {
     "name": "Apple Vision",
     "price": "3000",
-    "image-url":"/img/apple-vision.jpg",
+    "image_url":"/img/apple-vision.jpg",
     "description": "Lorem"
   },
   {
     "name": "Gaming Keyboard",
     "price": "150",
-    "image-url": "/img/gaming-keyboard.jpg",
+    "image_url": "/img/gaming-keyboard.jpg",
     "description": "Lorem"
   }
 ]

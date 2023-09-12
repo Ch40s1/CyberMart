@@ -1,4 +1,4 @@
-<main class="row mt-4">
+{{!-- <main class="row mt-4">
   <div class="product-container col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
     <img src="/img/Acer+Desktop.jpg" />
     <div class="d-flex flex-column align-items-center">
@@ -89,4 +89,20 @@
     </div>
   </div>
   </div>
+</main> --}}
+<main class="row mt-4">
+  {{#each techItems}}
+    <div class="product-container col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+      <img src="{{this.image_url}}" />
+      <div class="d-flex flex-column align-items-center">
+        <ul>
+          <li>{{this.name}}</li>
+          <li>${{this.price}}</li>
+          {{#if this.user}}
+            <li>Added by: {{this.user.name}}</li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  {{/each}}
 </main>
