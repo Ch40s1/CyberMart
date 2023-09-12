@@ -63,3 +63,6 @@ ul{
 li{
   color: var(--text-color);
 }
+.regular-text{
+  color: var(--text-color);
+}
