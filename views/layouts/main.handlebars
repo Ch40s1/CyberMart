@@ -14,7 +14,10 @@
   <header id="navBar" class="">
     <nav class="d-flex justify-content-around align-items-center">
       <h2>CyberMart</h2>
-      <ul class="d-flex gap-4 list-unstyled mt-3 ">
+      <input type="text" id="search" placeholder="Search Items...">
+
+      <div class="d-flex gap-4 list-unstyled align-items-center">
+        <i class="fa-solid fa-circle-half-stroke" id="mode-toggle"></i>
         <a href="/" target="_self">Home</a>
         |
         {{#if logged_in}}
@@ -27,15 +30,32 @@
         {{else}}
         <a href="/login" target="_self">Log In</a>
         {{/if}}
-      </ul>
-      <!-- Render script for logged in users only -->
-      {{#if logged_in}}
-      <script src='/js/logout.js'></script>
-      {{/if}}
+        <i class="fa-solid fa-cart-shopping fa-lg" id="cart"></i>
+      </div>
+
     </nav>
   </header>
-  {{{body}}}
-
+  <main class="d-flex">
+    <aside>
+      <img class="gif"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F27%2F94%2F6a%2F27946a99657cddf0cbde79a7e4e6f51f.gif&f=1&nofb=1&ipt=4aa4ecb379a008e5fdf1a887de4be0b9cb3075f639c24738cb475d04166031a1&ipo=images">
+      <img class="gif"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fe0%2F92%2Fa0%2Fe092a06e85ef68fea09cfe9349e537a2.gif&f=1&nofb=1&ipt=b945faecb9c9652c53763ae51fba349a3d5f05f3d1d1e1fe826af55ae88ecf13&ipo=images">
+    </aside>
+    {{{body}}}
+  </main>
+  {{!-- {{#if techItems.length}}
+  <div id="load-more-container">
+    <button id="load-more">Load More</button>
+  </div>
+{{/if}} --}}
+  {{#if logged_in}}
+  <!-- Render script for logged in users only -->
+  <script src='/js/logout.js'></script>
+   <script src='/js/loadMore.js'></script>
+  {{/if}}
+  <script src='/js/colorMode.js'></script>
+  <script src="https://kit.fontawesome.com/9cca718ac3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

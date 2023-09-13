@@ -18,6 +18,30 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+// router.get('/', async (req, res) => {
+//   try {
+//     const page = parseInt(req.query.page) || 1; // Get the page number from query params
+//     const itemsPerPage = 10; // Set the number of items per page
+
+//     const techItemData = await TechItems.findAll({
+//       include: [{ model: User, attributes: ['name'] }],
+//       limit: itemsPerPage, // Limit the number of items per page
+//       offset: (page - 1) * itemsPerPage, // Calculate the offset based on the page
+//     });
+
+//     const techItems = techItemData.map((techItem) => techItem.get({ plain: true }));
+
+//     res.render('homepage', {
+//       techItems,
+//       logged_in: req.session.logged_in,
+//       user_name: req.session.user_name,
+//       currentPage: page, // Pass the current page to the template
+//     });
+//   } catch (err) {
+//     console.error('Error fetching post data:', err);
+//     res.status(500).json(err);
+//   }
+// });
 
 // router.get('/project/:id', async (req, res) => {
 //   try {
@@ -43,6 +67,7 @@ router.get('/', async (req, res) => {
 // });
 
 // // Use withAuth middleware to prevent access to route
+// note for dev purposes I took off withAuth but we should prevent access to this
 // router.get('/profile', withAuth, async (req, res) => {
 //   try {
 //     // Find the logged in user based on the session ID
@@ -62,6 +87,9 @@ router.get('/', async (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
+router.get('/profile', (req, res) => {
+  res.render('profile')
+});
 
 router.get('/login', (req, res) => {
  // If the user is already logged in, redirect the request to another route

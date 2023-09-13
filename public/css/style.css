@@ -22,21 +22,30 @@
   font-weight: bold;
   margin-left: -5px;
 } */
+/*Dark mode*/
 :root {
   --text-color: #FFFFFF;
   --background-color-primary: #333333;
   --background-color-secondary: #1E272E;
   --background-color-tertiary: #000000;
+  --navbar-color-text: #FFFFFF;
 }
-
+/*light mode*/
+.light-mode {
+  --text-color: #000000;
+  --background-color-primary: #FFFFFF;
+  --background-color-secondary: #F0F0F0;
+  --background-color-tertiary: #EAEAEA;
+  --navbar-color-text: #FFFFFF;
+}
 #navBar{
   background-color: var(--background-color-primary);
   background-image: url(../img/Technology-Wallpaper.jpg);
   image-resolution: 200px;
-  color: var(--text-color);
+  color: var(--navbar-color-text);
 }
 a{
-  color: var(--text-color);
+  color: var(--navbar-color-text);
 }
 .container{
   background-color: var(--background-color-secondary);
@@ -75,7 +84,14 @@ li{
   text-decoration-line: underline;
   font-size: 100%;
 }
-/* .no-button:hover {
+.no-button:hover {
   /* color: #065b83; */
   text-decoration: underline;
-} */
+}
+
+#cart{
+  color: #FFFFFF;
+}
+.gif{
+  width: 8rem;
+}

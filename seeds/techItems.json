@@ -1,26 +1,206 @@
 [
   {
-    "name": "Acer Desktop",
-    "price": "300",
-    "image_url": "/img/Acer+Desktop.jpg",
+    "name": "AMD Ryzen 7 7800X3D",
+    "price": "399.00",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/f0e0e59d75066ec825667b71c31e3c83.256p.jpg",
     "description": "Lorem"
   },
   {
-    "name": "AMIR Gaming mouse",
-    "price": "100",
-    "image_url": "/img/AMIR-Gaming-Mouse.jpg",
+    "name": "Intel Core i7-13700K",
+    "price": "375.37",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/2f3405387f23ab827695d966ea9f9682.256p.jpg",
     "description": "Lorem"
   },
   {
-    "name": "Apple Vision",
-    "price": "3000",
-    "image_url":"/img/apple-vision.jpg",
+    "name": "AMD Ryzen 5 5600",
+    "price": "139.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/49fca908d8863ded4df790bd3af6bc12.256p.jpg",
     "description": "Lorem"
   },
   {
-    "name": "Gaming Keyboard",
-    "price": "150",
-    "image_url": "/img/gaming-keyboard.jpg",
+    "name": "AMD Ryzen 5 5600X",
+    "price": "157.75",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/3ef757133d38ac40afe75da691ba7d60.256p.jpg",
     "description": "Lorem"
+  },
+  {
+    "name": "Intel Core i9-13900K",
+    "price": "139.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/9ec7bf0f10e60c175e9b64c51bab7240.256p.jpg",
+    "description": "Description for PC Part 1"
+  },
+  {
+    "name": "MSI MAG B550 TOMAHAWK",
+    "price": "169.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/52ee465cbd64b16145232d863524c066.256p.jpg",
+    "description": "Description for PC Part 2"
+  },
+  {
+    "name": "Gigabyte B650 AORUS ELITE AX",
+    "price": "199.00",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/322a6059c413dd736536e5ad5c3a2285.256p.jpg",
+    "description": "Description for PC Part 3"
+  },
+  {
+    "name": "MSI B550 GAMING GEN3",
+    "price": "99.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/cbc52effd345bd5e9d66b5f7d198f8b4.256p.jpg",
+    "description": "Description for PC Part 4"
+  },
+  {
+    "name": "MSI B550-A PRO",
+    "price": "129.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/662aee2a85bbe3b7e12224e381e57d24.256p.jpg",
+    "description": "Description for PC Part 5"
+  },
+  {
+    "name": "Gigabyte Z790 AORUS ELITE AX",
+    "price": "239.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/ba20600286bf8f74ce71df37ed8aef65.256p.jpg",
+    "description": "Description for PC Part 6"
+  },
+  {
+    "name": "MSI GeForce RTX 3060 Ventus 2X 12G",
+    "price": "289.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.256p.jpg",
+    "description": "Description for PC Part 7"
+  },
+  {
+    "name": "Gigabyte WINDFORCE OC",
+    "price": "549.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/772cce097c55469671a0d75ea4aca83a.256p.jpg",
+    "description": "Description for PC Part 8"
+  },
+  {
+    "name": "MSI RTX 3060 Ventus 3X 12G OC",
+    "price": "299.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/24f2250843caa631f82d234bc781e9d0.256p.jpg",
+    "description": "Description for PC Part 9"
+  },
+  {
+    "name": "Asus ROG STRIX GAMING OC",
+    "price": "2009.98",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/9f7b45a2816c45ea9449e8ca2bf6f616.256p.jpg",
+    "description": "Description for PC Part 10"
+  },
+  {
+    "name": "Asus TUF GAMING OC",
+    "price": "348.36",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/715f2901c5912c64e515a0a82226d20e.256p.jpg",
+    "description": "Description for PC Part 11"
+  },
+  {
+    "name": "Asus TUF Gaming VG27AQ",
+    "price": "299.00",
+    "image_url": "https://m.media-amazon.com/images/I/41ZM7pNwiJL.jpg",
+    "description": "Description for PC Part 12"
+  },
+  {
+    "name": "Dell UP3218K",
+    "price": "4024.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/d033ac72d7a1b3440f64bd9d9892fa49.256p.jpg",
+    "description": "Description for PC Part 13"
+  },
+  {
+    "name": "Gigabyte G27Q",
+    "price": "229.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/733712e75da1ade84876cab068d301af.256p.jpg",
+    "description": "Description for PC Part 14"
+  },
+  {
+    "name": "Asus VG248QG",
+    "price": "189.00",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/325b541af8d2441964716a67de7ec081.256p.jpg",
+    "description": "Description for PC Part 15"
+  },
+  {
+    "name": "Samsung Odyssey G7",
+    "price": "449.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/c1cef36415ba8f85086b55459b9bf0aa.256p.jpg",
+    "description": "Description for PC Part 16"
+  },
+  {
+    "name": "Corsair 4000D Airflow",
+    "price": "89.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/bc6e987da3fe22c616898d1d7fa3d227.256p.jpg",
+    "description": "Description for PC Part 17"
+  },
+  {
+    "name": "Deepcool CC560",
+    "price": "66.98",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/eacaf9e3a9f012060fbd0a98f4e22511.256p.jpg",
+    "description": "Description for PC Part 18"
+  },
+  {
+    "name": "NZXT H5 Flow",
+    "price": "94.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/84cb77175187296029f50f8bf6ca6960.256p.jpg",
+    "description": "Description for PC Part 19"
+  },
+  {
+    "name": "Lian Li O11 Dynamic EVO",
+    "price": "154.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/ea0dee3c3376cc6326ca2f4a73a054ac.256p.jpg",
+    "description": "Description for PC Part 20"
+  },
+  {
+    "name": "NZXT H9 Flow",
+    "price": "159.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/61eb5534e35ce8af07f25ff28197862b.256p.jpg",
+    "description": "Description for PC Part 21"
+  },
+  {
+    "name": "Corsair Vengeance LPX 16 GB",
+    "price": "39.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/835ab3efad1be13bbe53beef3e3c6f96.256p.jpg",
+    "description": "Description for PC Part 22"
+  },
+  {
+    "name": "Corsair Vengeance 32 GB",
+    "price": "94.95",
+    "image_url": "https://m.media-amazon.com/images/I/41jJSPS8W7L.jpg",
+    "description": "Description for PC Part 23"
+  },
+  {
+    "name": "Corsair Vengeance RGB Pro 32 GB",
+    "price": "94.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/5f09867b54e9ad932b4dd1bc767f6238.256p.jpg",
+    "description": "Description for PC Part 24"
+  },
+  {
+    "name": "Corsair Vengeance LPX 32 GB",
+    "price": "69.98",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/11742fd6eec55fde4e3ee3a79529a111.256p.jpg",
+    "description": "Description for PC Part 25"
+  },
+  {
+    "name": "G.Skill Trident Z5 RGB 32 GB",
+    "price": "69.98",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/e8d573bd2eac864d427645f0d2f7cad8.256p.jpg",
+    "description": "Description for PC Part 26"
+  },
+  {
+    "name": "Cooler Master Hyper 212 Black Edition",
+    "price": "24.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/b45763abe7a0517129d3c0e026d0370d.256p.jpg",
+    "description": "Description for PC Part 27"
+  },
+  {
+    "name": "Cooler Master MASTERLIQUID ML240L RGB V2",
+    "price": "94.99",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/5b6a5e7f4cf456ccf6415235cf7adc99.256p.jpg",
+    "description": "Description for PC Part 28"
+  },
+  {
+    "name": "be quiet! Dark Rock Pro 4",
+    "price": "73.90",
+    "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/8ab57dc3c0eb346c72ef7a2405e31227.256p.jpg",
+    "description": "Description for PC Part 29"
+  },
+  {
+    "name": "Noctua NH-D15 chromax.black",
+    "price": "119.95",
+    "image_url": "https://m.media-amazon.com/images/I/51kgqhkUNuL.jpg",
+    "description": "Description for PC Part 30"
   }
 ]

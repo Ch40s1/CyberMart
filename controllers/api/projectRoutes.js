@@ -1,38 +1,24 @@
-// const router = require('express').Router();
-// const { Project } = require('../../models');
-// const withAuth = require('../../utils/auth');
+// const fs = require('fs');
+// const path = require('path');
 
-// router.post('/', withAuth, async (req, res) => {
-//   try {
-//     const newProject = await Project.create({
-//       ...req.body,
-//       user_id: req.session.user_id,
-//     });
+// router.get('/api/items', (req, res) => {
+//   // Get the page parameter from the request query (e.g., /api/items?page=2)
+//   const page = parseInt(req.query.page) || 1;
+//   const itemsPerPage = 10; // Set the number of items per page
 
-//     res.status(200).json(newProject);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
+//   // Read the JSON data from your techitems.json file
+//   const data = require('./techitems.json');
+
+//   // Calculate the start and end indices for the current page
+//   const startIndex = (page - 1) * itemsPerPage;
+//   const endIndex = startIndex + itemsPerPage;
+
+//   // Slice the data array to get items for the current page
+//   const items = data.slice(startIndex, endIndex);
+
+//   // Send the items as JSON response
+//   res.json(items);
 // });
 
-// router.delete('/:id', withAuth, async (req, res) => {
-//   try {
-//     const projectData = await Project.destroy({
-//       where: {
-//         id: req.params.id,
-//         user_id: req.session.user_id,
-//       },
-//     });
-
-//     if (!projectData) {
-//       res.status(404).json({ message: 'No project found with this id!' });
-//       return;
-//     }
-
-//     res.status(200).json(projectData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 // module.exports = router;
