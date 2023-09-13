@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { TechItems, User } = require('../models');
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try{
@@ -9,7 +9,10 @@ router.get('/', async (req, res) => {
       include: [{ model: User, attributes: ['name'] }],
     });
     const techItems = techItemData.map((techitems) => techitems.get({ plain: true }));
-    res.render('homepage', {techItems});
+    res.render('homepage', {techItems,
+      logged_in: req.session.logged_in,
+      user_name: req.session.user_name,
+    });
   } catch (err) {
     console.error('Error fetching post data:', err);
     res.status(500).json(err);
@@ -61,11 +64,11 @@ router.get('/', async (req, res) => {
 // });
 
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  // if (req.session.logged_in) {
-  //   res.redirect('/profile');
-  //   return;
-  // }
+ // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
 
   res.render('login');
 });
