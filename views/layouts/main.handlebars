@@ -14,7 +14,10 @@
   <header id="navBar" class="">
     <nav class="d-flex justify-content-around align-items-center">
       <h2>CyberMart</h2>
-      <ul class="d-flex gap-4 list-unstyled mt-3 ">
+      <input type="text" id="search" placeholder="Search Items...">
+
+      <div class="d-flex gap-4 list-unstyled align-items-center">
+        <i class="fa-solid fa-circle-half-stroke"  id="mode-toggle"></i>
         <a href="/" target="_self">Home</a>
         |
         {{#if logged_in}}
@@ -27,15 +30,18 @@
         {{else}}
         <a href="/login" target="_self">Log In</a>
         {{/if}}
-      </ul>
-      <!-- Render script for logged in users only -->
-      {{#if logged_in}}
-      <script src='/js/logout.js'></script>
-      {{/if}}
+        <i class="fa-solid fa-cart-shopping fa-lg" id="cart"></i>
+      </div>
+
     </nav>
   </header>
   {{{body}}}
-
+  {{#if logged_in}}
+  <!-- Render script for logged in users only -->
+  <script src='/js/logout.js'></script>
+  {{/if}}
+   <script src='/js/colorMode.js'></script>
+  <script src="https://kit.fontawesome.com/9cca718ac3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
