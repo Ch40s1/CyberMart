@@ -65,7 +65,11 @@ router.get('/', async (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
-
+// Define a route for rendering the cart page
+router.get('/cart', (req, res) => {
+  // Render the "cart.hbs" template without passing any data
+  res.render('cart');
+});
 // // Use withAuth middleware to prevent access to route
 // note for dev purposes I took off withAuth but we should prevent access to this
 // router.get('/profile', withAuth, async (req, res) => {

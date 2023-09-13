@@ -5,5 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   modeToggle.addEventListener('click', function () {
     body.classList.toggle('light-mode');
+    console.log('Toggle button clicked'); //
   });
 });
