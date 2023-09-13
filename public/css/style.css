@@ -66,3 +66,16 @@ li{
 .regular-text{
   color: var(--text-color);
 }
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-color);
+  text-decoration-line: underline;
+  font-size: 100%;
+}
+/* .no-button:hover {
+  /* color: #065b83; */
+  text-decoration: underline;
+} */

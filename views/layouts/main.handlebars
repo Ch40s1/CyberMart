@@ -15,21 +15,23 @@
     <nav class="d-flex justify-content-around align-items-center">
       <h2>CyberMart</h2>
       <ul class="d-flex gap-4 list-unstyled mt-3 ">
-          <a href="/" target="_self">Home</a>
-
+        <a href="/" target="_self">Home</a>
+        |
         {{#if logged_in}}
         Hello
-         {{user_name}}
+        {{user_name}}
+        |
+        <button class='no-button' id='logout'>logout</button>
+        |
+        <a href='/profile'>profile</a>
         {{else}}
         <a href="/login" target="_self">Log In</a>
         {{/if}}
-
-        <a>Profile</a>
       </ul>
       <!-- Render script for logged in users only -->
-      {{!-- {{#if logged_in}}
+      {{#if logged_in}}
       <script src='/js/logout.js'></script>
-      {{/if}} --}}
+      {{/if}}
     </nav>
   </header>
   {{{body}}}
