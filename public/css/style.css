@@ -95,3 +95,29 @@ li{
 .gif{
   width: 8rem;
 }
+#cart-aside {
+  display: none;
+  position: fixed;
+  top: 4rem;
+  right: 0; /* Position the cart on the right side */
+  bottom: 15rem;
+  left: auto; /* Remove the left positioning */
+  /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+  background-color: var(--background-color-tertiary);
+  z-index: 1000; /* Ensure it appears above other content */
+  overflow-y: auto; /* Enable scrolling if content exceeds the viewport */
+}
+
+#cart-aside.open {
+  display: block;
+}
+#cart-content {
+  position: absolute;
+  top: 50%; /* Vertically center the cart content */
+  transform: translateY(-50%);
+  background-color: #fff; /* Background color for the cart content */
+  padding: 20px;
+  max-width: 80%; /* Adjust the maximum width as needed */
+  right: 0; /* Position the cart content on the right side */
+  left: auto; /* Remove the left positioning */
+}
