@@ -133,11 +133,13 @@ li{
 #exit-marker:hover{
   cursor: pointer;
 }
-#cart-container{
+.cart-container{
   color: var(--text-color);
   border: 5px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
 }
-#cart-container img{
+.cart-container img{
   height: 5rem;
   width: 5rem;
 }

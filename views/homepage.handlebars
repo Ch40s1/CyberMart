@@ -1,23 +1,27 @@
- <aside>
-      <img class="gif"
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F27%2F94%2F6a%2F27946a99657cddf0cbde79a7e4e6f51f.gif&f=1&nofb=1&ipt=4aa4ecb379a008e5fdf1a887de4be0b9cb3075f639c24738cb475d04166031a1&ipo=images">
-      <img class="gif"
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fe0%2F92%2Fa0%2Fe092a06e85ef68fea09cfe9349e537a2.gif&f=1&nofb=1&ipt=b945faecb9c9652c53763ae51fba349a3d5f05f3d1d1e1fe826af55ae88ecf13&ipo=images">
-    </aside>
+<aside>
+  <img class="gif"
+    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F27%2F94%2F6a%2F27946a99657cddf0cbde79a7e4e6f51f.gif&f=1&nofb=1&ipt=4aa4ecb379a008e5fdf1a887de4be0b9cb3075f639c24738cb475d04166031a1&ipo=images">
+  <img class="gif"
+    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fe0%2F92%2Fa0%2Fe092a06e85ef68fea09cfe9349e537a2.gif&f=1&nofb=1&ipt=b945faecb9c9652c53763ae51fba349a3d5f05f3d1d1e1fe826af55ae88ecf13&ipo=images">
+</aside>
+
 <main id="item-container" class="row mt-4">
   {{#each techItems}}
-    <div class="product-container col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
-      <img src="{{this.image_url}}" />
-      <div class="d-flex flex-column align-items-center">
-        <ul>
-          <li>{{this.name}}</li>
-          <li>${{this.price}}</li>
-          {{#if this.user}}
-            <li>Added by: {{this.user.name}}</li>
-          {{/if}}
-        </ul>
-      </div>
-      <button>Add To Cart</button>
+  <div class="product-container col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+    <img src="{{this.image_url}}" />
+    <div class="d-flex flex-column align-items-center">
+      <ul>
+        <li>{{this.name}}</li>
+        <li>${{this.price}}</li>
+        {{#if this.user}}
+        <li>Added by: {{this.user.name}}</li>
+        {{/if}}
+      </ul>
     </div>
+    <button class="add-to-cart-button" data-name="{{this.name}}" data-img="{{this.image_url}}"
+      data-price="{{this.price}}">Add To Cart</button>
+  </div>
   {{/each}}
 </main>
+
+<script src="/js/cartUpdate.js"></script>

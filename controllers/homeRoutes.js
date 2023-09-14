@@ -72,6 +72,9 @@ router.get('/cart', (req, res) => {
 router.get('/profile', (req, res) => {
   res.render('profile')
 });
+router.get('/checkout', (req, res) => {
+  res.render('checkout')
+});
 
 router.get('/login', (req, res) => {
  // If the user is already logged in, redirect the request to another route
