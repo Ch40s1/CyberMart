@@ -29,6 +29,8 @@
   --background-color-secondary: #1E272E;
   --background-color-tertiary: #000000;
   --navbar-color-text: #FFFFFF;
+  --border-color: #FFF;
+  --cart-color: #c8c6c6;
 }
 /*light mode*/
 .light-mode {
@@ -37,6 +39,7 @@
   --background-color-secondary: #F0F0F0;
   --background-color-tertiary: #EAEAEA;
   --navbar-color-text: #FFFFFF;
+  --border-color: #000000;
 }
 #navBar{
   background-color: var(--background-color-primary);
@@ -88,9 +91,14 @@ li{
   /* color: #065b83; */
   text-decoration: underline;
 }
-
+#mode-toggle{
+  cursor: pointer;
+}
 #cart{
-  color: #FFFFFF;
+  color: #fff;
+}
+#cart:hover{
+  cursor: pointer;
 }
 .gif{
   width: 8rem;
@@ -101,23 +109,38 @@ li{
   top: 4rem;
   right: 0; /* Position the cart on the right side */
   bottom: 15rem;
-  left: auto; /* Remove the left positioning */
+  left: auto;
   /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
   background-color: var(--background-color-tertiary);
   z-index: 1000; /* Ensure it appears above other content */
   overflow-y: auto; /* Enable scrolling if content exceeds the viewport */
+  border: 5px solid var(--border-color);
 }
 
 #cart-aside.open {
   display: block;
 }
 #cart-content {
-  position: absolute;
-  top: 50%; /* Vertically center the cart content */
   transform: translateY(-50%);
-  background-color: #fff; /* Background color for the cart content */
   padding: 20px;
-  max-width: 80%; /* Adjust the maximum width as needed */
-  right: 0; /* Position the cart content on the right side */
-  left: auto; /* Remove the left positioning */
+}
+#exit-marker{
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: var(--text-color);
+}
+#exit-marker:hover{
+  cursor: pointer;
+}
+#cart-container{
+  color: var(--text-color);
+  border: 5px solid var(--border-color);
+}
+#cart-container img{
+  height: 5rem;
+  width: 5rem;
+}
+#cart-aside h1{
+   color: var(--text-color);
 }
