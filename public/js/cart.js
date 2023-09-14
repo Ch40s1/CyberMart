@@ -31,6 +31,7 @@
 // Get references to the cart icon and the cart-aside element
 const cartIcon = document.getElementById("cart");
 const cartAside = document.getElementById("cart-aside");
+const exit = document.getElementById('exit-marker');
 
 // Add a click event listener to the cart icon
 cartIcon.addEventListener("click", () => {
@@ -38,3 +39,7 @@ cartIcon.addEventListener("click", () => {
   // Toggle the visibility of the cart-aside element
   cartAside.classList.toggle("open");
 });
+
+exit.addEventListener('click',()=>{
+  cartAside.classList.toggle("open");
+})
