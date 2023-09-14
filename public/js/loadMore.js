@@ -5,7 +5,7 @@
 // loadMoreButton.addEventListener('click', () => {
 //   currentPage += 1;
 
-//   fetch(`/page?=${currentPage}`)
+//   fetch(`/=${currentPage}`)
 //     .then((response) => response.json())
 //     .then((data) => {
 //       // Check if there are no more items to load
@@ -30,7 +30,6 @@
 //   const itemDiv = document.createElement('div');
 //   itemDiv.className = 'product-container col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center';
 
-//   // Create the item HTML structure similar to your Handlebars template
 //   itemDiv.innerHTML = `
 //     <img src="${item.image_url}" />
 //     <div class="d-flex flex-column align-items-center">
