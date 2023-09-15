@@ -146,3 +146,6 @@ li{
 #cart-aside h1{
    color: var(--text-color);
 }
+.deleteButton {
+  color: black;
+}

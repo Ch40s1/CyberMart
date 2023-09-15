@@ -4,7 +4,7 @@ let cartContent = JSON.parse(localStorage.getItem('cart')) || [];
 // Function to save the cart content to local storage
 function saveCartToLocalStorage() {
   localStorage.setItem('cart', JSON.stringify(cartContent));
-}
+};
 
 document.querySelectorAll('.add-to-cart-button').forEach(function (button) {
   button.addEventListener('click', function () {
@@ -72,10 +72,19 @@ function  updateCart(item) {
   cartItemImage.src = selectedItem.image;
   cartSection.appendChild(cartItemImage);
 
+
+  // Create a delete button
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete';
+  deleteButton.addEventListener('click', function () {
+    removeFromCart(selectedItem);
+  });
+
   const cartItemPrice = document.createElement('p');
   cartItemPrice.textContent = `Price: $${selectedItem.price}`;
 
   cartSection.appendChild(cartItemName);
+  cartSection.appendChild(deleteButton);
   cartSection.appendChild(cartItemPrice);
   asideContainer.appendChild(cartSection);
 
@@ -99,13 +108,55 @@ function updateCheckout(){
     const cartItemImage = document.createElement('img');
     cartItemImage.src = selectedItem.image;
     cartSection.appendChild(cartItemImage);
+     // Create a delete button
+
+  // const deleteButton = document.createElement('button');
+  // deleteButton.textContent = 'Delete';
+  // deleteButton.addEventListener('click', function () {
+  //   removeFromCart(selectedItem); // Call a function to remove the item
+  // });
 
     const cartItemPrice = document.createElement('p');
     cartItemPrice.textContent = `Price: $${selectedItem.price}`;
 
     cartSection.appendChild(cartItemName);
     cartSection.appendChild(cartItemPrice);
+    // cartSection.appendChild(deleteButton);
     checkoutContainer.appendChild(cartSection);
   });
 }
+
+
+if (window.location.pathname === '/checkout') {
+  updateTotalPrice();
+}
+
+
+function updateTotalPrice(){
+  const totalPriceElement = document.getElementById('total-price');
+  const totalPrice = cartContent.reduce((total, item) => total + parseFloat(item.price), 0);
+  const totalPriceInteger = Math.floor(totalPrice);
+
+  totalPriceElement.textContent = `Total Price: $${totalPriceInteger}`;
+
+}
+
+function removeFromCart(item) {
+  const index = cartContent.indexOf(item);
+  if (index !== -1) {
+    cartContent.splice(index, 1);
+    updateCartDisplay();
+    saveCartToLocalStorage();
+  }
+}
+function updateCartDisplay() {
+  const asideContainer = document.getElementById('section-container');
+  asideContainer.innerHTML = '';
+
+  cartContent.forEach(item => {
+    updateCart(item);
+  });
+}
+
+
 updateCheckout();
