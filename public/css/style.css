@@ -1,29 +1,17 @@
-/* header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+*{
+  font-family: 'Roboto', sans-serif;
 }
-
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
-}
-
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-} */
 /*Dark mode*/
 :root {
+  --text-color: #000000;
+  --background-color-primary: #FFFFFF;
+  --background-color-secondary: #F0F0F0;
+  --background-color-tertiary: #EAEAEA;
+  --navbar-color-text: #FFFFFF;
+  --border-color: #000000;
+}
+/*light mode*/
+.dark-mode {
   --text-color: #FFFFFF;
   --background-color-primary: #333333;
   --background-color-secondary: #1E272E;
@@ -31,15 +19,6 @@
   --navbar-color-text: #FFFFFF;
   --border-color: #FFF;
   --cart-color: #c8c6c6;
-}
-/*light mode*/
-.light-mode {
-  --text-color: #000000;
-  --background-color-primary: #FFFFFF;
-  --background-color-secondary: #F0F0F0;
-  --background-color-tertiary: #EAEAEA;
-  --navbar-color-text: #FFFFFF;
-  --border-color: #000000;
 }
 #navBar{
   background-color: var(--background-color-primary);
@@ -115,6 +94,7 @@ li{
   z-index: 1000; /* Ensure it appears above other content */
   overflow-y: auto; /* Enable scrolling if content exceeds the viewport */
   border: 5px solid var(--border-color);
+  border-radius: 10px;
 }
 
 #cart-aside.open {
@@ -149,3 +129,6 @@ li{
 .deleteButton {
   color: black;
 }
+/* .load{
+  background-color: var(--border-color);
+} */

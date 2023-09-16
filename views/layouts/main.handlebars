@@ -6,6 +6,9 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>CyberMart</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='/css/style.css' />
 </head>
 
@@ -36,10 +39,9 @@
   </header>
   <main class="d-flex">
     {{{body}}}
-
     <aside id="cart-aside" class="col-md-4 ">
       <div class="d-flex justify-content-center">
-       <h1>Your Cart</h1>
+        <h1>Your Cart</h1>
         <i class="fa-regular fa-circle-xmark fa-lg" id="exit-marker"></i>
       </div>
       <div id="section-container">
@@ -47,9 +49,9 @@
 
         </div>
       </div>
-       <div class="text-center">
-          <a href='/checkout' style="color: aliceblue;" id="checkout">checkout</a>
-        </div>
+      <div class="text-center">
+        <a href='/checkout' style="color: aliceblue;" id="checkout">checkout</a>
+      </div>
     </aside>
 
   </main>
@@ -61,8 +63,8 @@
   {{#if logged_in}}
   <!-- Render script for logged in users only -->
   <script src='/js/logout.js'></script>
-  <script src='/js/loadMore.js'></script>
   {{/if}}
+
   <script src='/js/cart.js'></script>
   <script src='/js/colorMode.js'></script>
   <script src="https://kit.fontawesome.com/9cca718ac3.js" crossorigin="anonymous"></script>
