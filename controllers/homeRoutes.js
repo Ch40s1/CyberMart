@@ -3,13 +3,24 @@ const { TechItems, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  try{
+  try {
+    let itemsPerPage = 5; // Set the initial number of items per page
+
+    if (req.query.page) {
+      // If a page query parameter is provided, calculate the offset
+      const page = parseInt(req.query.page);
+      itemsPerPage += (page - 1) * 5;
+    }
+
     const techItemData = await TechItems.findAll({
-      // Include User model to get the author's name
       include: [{ model: User, attributes: ['name'] }],
+      limit: itemsPerPage,
     });
-    const techItems = techItemData.map((techitems) => techitems.get({ plain: true }));
-    res.render('homepage', {techItems,
+
+    const techItems = techItemData.map((techItem) => techItem.get({ plain: true }));
+
+    res.render('homepage', {
+      techItems,
       logged_in: req.session.logged_in,
       user_name: req.session.user_name,
     });
@@ -25,8 +36,8 @@ router.get('/', async (req, res) => {
 
 //     const techItemData = await TechItems.findAll({
 //       include: [{ model: User, attributes: ['name'] }],
-//       limit: itemsPerPage, // Limit the number of items per page
-//       offset: (page - 1) * itemsPerPage, // Calculate the offset based on the page
+//       limit: itemsPerPage,
+//       offset: (page - 1) * itemsPerPage,
 //     });
 
 //     const techItems = techItemData.map((techItem) => techItem.get({ plain: true }));
@@ -35,7 +46,7 @@ router.get('/', async (req, res) => {
 //       techItems,
 //       logged_in: req.session.logged_in,
 //       user_name: req.session.user_name,
-//       currentPage: page, // Pass the current page to the template
+//       currentPage: page,
 //     });
 //   } catch (err) {
 //     console.error('Error fetching post data:', err);
@@ -50,28 +61,27 @@ router.get('/cart', (req, res) => {
 });
 // // Use withAuth middleware to prevent access to route
 // note for dev purposes I took off withAuth but we should prevent access to this
-// router.get('/profile', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const userData = await User.findByPk(req.session.user_id, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Project }],
-//     });
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
 
-//     const user = userData.get({ plain: true });
+    const user = userData.get({ plain: true });
 
-//     res.render('profile', {
-//       ...user,
-//       logged_in: true,
-//       user_name: req.session.user_name,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-router.get('/profile', (req, res) => {
-  res.render('profile')
+    res.render('profile', {
+      ...user,
+      logged_in: true,
+      user_name: req.session.user_name,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
+// router.get('/profile', withAuth, (req, res) => {
+//   res.render('profile')
+// });
 router.get('/checkout', (req, res) => {
   res.render('checkout')
 });

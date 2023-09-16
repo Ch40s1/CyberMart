@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const body = document.body;
 
   modeToggle.addEventListener('click', function () {
-    body.classList.toggle('light-mode');
+    body.classList.toggle('dark-mode');
     console.log('Toggle button clicked'); //
   });
 });

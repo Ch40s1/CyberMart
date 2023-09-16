@@ -4,6 +4,8 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const techData = require('./seeds/techItems.json');
+const { TechItems } = require('./models');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -42,7 +44,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(async () => {
+  // Seed tech items without assigning any user
+  for (const techItem of techData) {
+    await TechItems.create(techItem);
+  }
   app.listen(PORT, ()=>{
     console.log(
     `Now listening:Click this Link =>
