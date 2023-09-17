@@ -1,14 +1,18 @@
 *{
   font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
 }
 /*Dark mode*/
 :root {
   --text-color: #000000;
-  --background-color-primary: #FFFFFF;
+  --section-color: #00FFFF;
+  --background-color-primary: #1f242d;
   --background-color-secondary: #F0F0F0;
   --background-color-tertiary: #EAEAEA;
   --navbar-color-text: #FFFFFF;
   --border-color: #000000;
+  /* --triad-color: #3347F5; */
+  --triad-color: #93278F;
 }
 /*light mode*/
 .dark-mode {
@@ -19,10 +23,11 @@
   --navbar-color-text: #FFFFFF;
   --border-color: #FFF;
   --cart-color: #c8c6c6;
+  --triad-color: #F57A4B;
 }
 #navBar{
   background-color: var(--background-color-primary);
-  background-image: url(../img/Technology-Wallpaper.jpg);
+  /* background-image: url(../img/Technology-Wallpaper.jpg); */
   image-resolution: 200px;
   color: var(--navbar-color-text);
 }
@@ -47,6 +52,7 @@ img{
 } */
 body{
   background-color: var(--background-color-secondary);
+
 }
 ul{
   list-style: none;
@@ -54,8 +60,25 @@ ul{
 li{
   color: var(--text-color);
 }
+#logout{
+  color: var(--navbar-color-text);
+}
 .regular-text{
   color: var(--text-color);
+}
+.red-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: red;
+}
+span{
+  background-color: red;
+}
+.heading-container{
+  background-color: var(--background-color-primary);
 }
 .no-button {
   background: none;
@@ -96,7 +119,9 @@ li{
   border: 5px solid var(--border-color);
   border-radius: 10px;
 }
-
+#checkout{
+  color: var(--text-color);
+}
 #cart-aside.open {
   display: block;
 }
@@ -108,7 +133,7 @@ li{
   position: absolute;
   left: 0;
   top: 10px;
-  color: var(--text-color);
+  color: var(--navbar-color-text);
 }
 #exit-marker:hover{
   cursor: pointer;
@@ -129,6 +154,23 @@ li{
 .deleteButton {
   color: black;
 }
-/* .load{
-  background-color: var(--border-color);
-} */
+.load{
+  border-top: 4px solid var(--text-color);
+}
+#load-more{
+  background-color: var(--triad-color);
+  color: white;
+}
+#footer {
+  background-color: var(--background-color-primary);
+  color: var(--navbar-color-text);
+  height: 4.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.5rem;
+  margin-top: auto; /* Push the footer to the bottom */
+  margin-bottom: 0;
+  /* Add any additional styles for your footer here */
+}

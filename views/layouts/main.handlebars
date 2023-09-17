@@ -15,7 +15,7 @@
 <body>
   <header id="navBar" class="">
     <nav class="d-flex justify-content-around align-items-center">
-      <h2>CyberMart</h2>
+      <h2><span>Cyber</span>Mart</h2>
       <input type="text" id="search" placeholder="Search Items...">
 
       <div class="d-flex gap-4 list-unstyled align-items-center">
@@ -26,35 +26,43 @@
         Hello
         {{user_name}}
         |
-        <button class='no-button' id='logout'>logout</button>
+        <button class='no-button' id='logout'>Logout</button>
         |
         <a href='/profile'>profile</a>
         {{else}}
         <a href="/login" target="_self">Log In</a>
         {{/if}}
+        <div class="red-container">
         <i class="fa-solid fa-cart-shopping fa-lg" id="cart"></i>
+        </div>
       </div>
 
     </nav>
   </header>
-  <main class="d-flex">
+
+  <body>
+
     {{{body}}}
+
     <aside id="cart-aside" class="col-md-4 ">
-      <div class="d-flex justify-content-center">
-        <h1>Your Cart</h1>
+      <div class="heading-container d-flex justify-content-center">
+        <h1 style="color: white;">Your Cart</h1>
         <i class="fa-regular fa-circle-xmark fa-lg" id="exit-marker"></i>
       </div>
       <div id="section-container">
         <div class="d-flex justify-content-center">
-
         </div>
       </div>
       <div class="text-center">
-        <a href='/checkout' style="color: aliceblue;" id="checkout">checkout</a>
+        <a href='/checkout' id="checkout">checkout</a>
       </div>
     </aside>
 
-  </main>
+  </body>
+  <footer id="footer" class="">
+    <a href="https://github.com/Ch40s1/CyberMart" target="_blank">Contact Us</a>
+    <a href="https://github.com/Ch40s1/CyberMart" target="_blank">Github</a>
+  </footer>
   {{!-- {{#if techItems.length}}
   <div id="load-more-container">
     <button id="load-more">Load More</button>

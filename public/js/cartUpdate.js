@@ -19,7 +19,7 @@ document.querySelectorAll('.add-to-cart-button').forEach(function (button) {
     };
 
     cartContent.push(item);
-    updateCart(item);
+    // updateCart(item);
     swal("Item added to the cart!", "", "success");
     saveCartToLocalStorage();
   });
