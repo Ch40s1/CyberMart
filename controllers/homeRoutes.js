@@ -83,8 +83,24 @@ router.get('/profile', withAuth, async (req, res) => {
 // router.get('/profile', withAuth, (req, res) => {
 //   res.render('profile')
 // });
-router.get('/checkout', (req, res) => {
-  res.render('checkout')
+router.get('/checkout',withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('checkout', {
+      ...user,
+      logged_in: true,
+      user_name: req.session.user_name,
+      user_firstName: req.session.user_firstName,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/login', (req, res) => {

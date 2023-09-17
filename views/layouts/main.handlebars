@@ -29,6 +29,7 @@
         <button class='no-button' id='logout'>Logout</button>
         |
         <a href='/profile'>profile</a>
+        <a href='/checkout' class="checkout-login">checkout</a>
         {{else}}
         <a href="/login" target="_self">Log In</a>
         {{/if}}
@@ -44,7 +45,7 @@
 
     {{{body}}}
 
-    <aside id="cart-aside" class="col-md-4 ">
+    <aside id="cart-aside" class="ca col-md-4 ">
       <div class="heading-container d-flex justify-content-center">
         <h1 style="color: white;">Your Cart</h1>
         <i class="fa-regular fa-circle-xmark fa-lg" id="exit-marker"></i>
