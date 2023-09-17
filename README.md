@@ -9,8 +9,6 @@ Our motivation to create this web application stemmed from the expanding technol
 
 ## Table of Contents
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
@@ -18,32 +16,34 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-Open up the terminal and npm i
-mysql -u root -p
-source schema.sql
-exit
-npm run seed
-npm start
+To get started with our project, follow these steps:
+
+1. Open up the terminal.
+2. Run the following command to install dependencies: (npm i)
+3. Set up your MySQL database:
+4. Seed the database: (npm run seed)
+5. Start the application: (npm start)
+
+<img src="./public/img/scripts.png" alt="Scripts" width="200" height="100">
+<img src="./public/img/dependencies.png" alt="Dependencies" width="200" height="100">
+
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+To use the website:
 
-To use the website just search for the computer parts that you want then add them to your cart and checkout.
-
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
+1. Search for the computer parts you want.
+2. Add them to your cart.
+3. Proceed to checkout.
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Thanks to our collaborators for their contributions:
 
-Daniel Z https://github.com/Ch40s1
-Crislyn W https://github.com/c-wrenn
-Chaye W https://github.com/starshipog
+- [Daniel Z](https://github.com/Ch40s1)
+- [Crislyn W](https://github.com/c-wrenn)
+- [Chaye W](https://github.com/starshipog)
+![websiteImage](./public/img/site.png)
 
 
 ## License
@@ -72,6 +72,5 @@ SOFTWARE.
 
 ## Features
 
-If your project has a lot of features, list them here.
-The user can create a account
-Add items they want to buy to a cart and checkout
+- User account creation.
+- Add items to a cart and proceed to checkout.
