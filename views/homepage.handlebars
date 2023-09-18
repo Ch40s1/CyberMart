@@ -7,10 +7,25 @@
   </link>
 </aside> --}}
 
+{{!-- <aside class="sorted">
+    <div style="background-color: black;" > --}}
+      {{!-- <button id="sort-by-name-button">Sort by Name</button> --}}
+      {{!-- <button class="cat" data-category="{{techItems.category}}">category</button> --}}
+        {{!-- <a id="sort-by-part" href="/?sort=name&order=ASC">Computer Cases</a> --}}
+    
+      {{!-- <a id="compcase"    href="/computercases">Computer Cases</a> --}}
+      {{!-- <a id="fans"        href="">Fans and Cooling</a>
+      <a id="monitors"     href="">Monitors</a>
+      <a id="motherboards" href="">Motherboards</a>
+      <a id="processors" href="">Processors</a>
+    </div>
+</aside> --}}
+{{!-- <button class="motherboard" data-cat="{{techItems.category}}">category</button> --}}
+
 <main style="min-height: 85vh; flex: 1;">
   <div id="item-container" class="row mt-4 mr-0">
     {{#each techItems}}
-    <div class="product-container col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+    <div data-category="{{this.category}}" class="product-container col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
       <img src="{{this.image_url}}" />
       <div class="d-flex flex-column align-items-center">
         <ul>
@@ -23,6 +38,8 @@
       </div>
       <button class="add-to-cart-button" data-name="{{this.name}}" data-img="{{this.image_url}}"
         data-price="{{this.price}}">Add To Cart</button>
+       <button class="cat" data-category="{{this.category}}">view category</button>
+       {{!-- <button class="mon" data-displays= "{{this.category.Monitors}}">Monitors</button> --}}
     </div>
     {{/each}}
   </div>

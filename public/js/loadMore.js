@@ -27,13 +27,66 @@ loadMoreButton.addEventListener('click', () => {
       if (tempDiv.querySelector('#load-more').style.display === 'none') {
         loadMoreButton.style.display = 'none'; // Hide the button
       }
+
+      attachEventListeners();
     })
     .catch((error) => {
       console.error('Error loading more items:', error);
     });
 });
 
+function attachEventListeners() {
+  document.querySelectorAll('.cat').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const categoryFilter = button.getAttribute('data-category');
+      const itemContainer = document.getElementById('item-container');
+      const items = Array.from(itemContainer.querySelectorAll('.product-container'));
+  
+      const filteredItems = items.filter(item => {
+        const itemCategory = item.getAttribute('data-category');
+        return itemCategory === categoryFilter;
+      });
+      console.log("FILTERED ITEMS", filteredItems);
+  
+      itemContainer.innerHTML = '';
+  
+      if (filteredItems.length) {
+        itemContainer.innerHTML = '';
+        filteredItems.forEach((item) => {
+          itemContainer.appendChild(item);
+        });
+      }
+    });
+  });
+}
 
+attachEventListeners();
+// document.querySelector('.motherboard').forEach(function(button){
+//   button.addEventListener('click', function (){
+//     const boardfilter = button.getAttribute('data-cat');
+//     const itemContainer = document.getElementById('item-container');
+//     const motherB = Array.from(itemContainer.querySelectorAll('.product-container'));
+
+//     const filteredItems = items.filter(motherB => {
+//       const itemCategory = item.getAttribute('data-category');
+//       return itemCategory === boardfilter;
+//     })
+//   })
+// })
+
+// document.querySelectorAll('.cat').forEach(function(button) {
+//   button.addEventListener('click', function() {
+//     const category11 = button.getAttribute('data-category');
+//     alert("Category: " + category11);
+//   });
+// });
+
+// document.querySelectorAll('.mon').forEach(function(button){
+//   button.addEventListener('click', function(){
+//     const mon1 = button.value.getAttribute('Monitors');
+//     alert("monitors trying");
+//   })
+// })
 
 // // Helper function to create an item element
 // function createItemElement(item) {
