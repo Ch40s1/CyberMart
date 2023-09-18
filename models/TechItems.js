@@ -33,6 +33,10 @@ TechItems.init(
         key: 'id',
       },
     },
+     category:{
+      type: DataTypes.STRING,
+    // primaryKey:true
+    }
   },
   {
     sequelize,

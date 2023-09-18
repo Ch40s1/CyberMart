@@ -101,37 +101,40 @@ function  updateCart(item) {
 
 function updateCheckout(){
   const checkoutContainer = document.getElementById('checkout-container');
-  checkoutContainer.innerHTML = ''; // Clear the existing content
+  if(checkoutContainer) {
+    checkoutContainer.innerHTML = ''; // Clear the existing content
 
-  // Retrieve the cart content from local storage
-  const cartContent = JSON.parse(localStorage.getItem('cart')) || [];
+    // Retrieve the cart content from local storage
+    const cartContent = JSON.parse(localStorage.getItem('cart')) || [];
 
-  cartContent.forEach(selectedItem => {
-    const cartSection = document.createElement('div')
-    cartSection.classList.add('cart-container');
+    cartContent.forEach(selectedItem => {
+      const cartSection = document.createElement('div')
+      cartSection.classList.add('cart-container');
 
-    const cartItemName = document.createElement('h3');
-    cartItemName.textContent = selectedItem.name;
+      const cartItemName = document.createElement('h3');
+      cartItemName.textContent = selectedItem.name;
 
-    const cartItemImage = document.createElement('img');
-    cartItemImage.src = selectedItem.image;
-    cartSection.appendChild(cartItemImage);
-     // Create a delete button
+      const cartItemImage = document.createElement('img');
+      cartItemImage.src = selectedItem.image;
+      cartSection.appendChild(cartItemImage);
+      // Create a delete button
 
-  // const deleteButton = document.createElement('button');
-  // deleteButton.textContent = 'Delete';
-  // deleteButton.addEventListener('click', function () {
-  //   removeFromCart(selectedItem); // Call a function to remove the item
-  // });
+    // const deleteButton = document.createElement('button');
+    // deleteButton.textContent = 'Delete';
+    // deleteButton.addEventListener('click', function () {
+    //   removeFromCart(selectedItem); // Call a function to remove the item
+    // });
 
-    const cartItemPrice = document.createElement('p');
-    cartItemPrice.textContent = `Price: $${selectedItem.price}`;
+      const cartItemPrice = document.createElement('p');
+      cartItemPrice.textContent = `Price: $${selectedItem.price}`;
 
-    cartSection.appendChild(cartItemName);
-    cartSection.appendChild(cartItemPrice);
-    // cartSection.appendChild(deleteButton);
-    checkoutContainer.appendChild(cartSection);
-  });
+      cartSection.appendChild(cartItemName);
+      cartSection.appendChild(cartItemPrice);
+      // cartSection.appendChild(deleteButton);
+      checkoutContainer.appendChild(cartSection);
+    });
+  }
+  
 }
 
 
