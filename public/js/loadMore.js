@@ -32,30 +32,20 @@ loadMoreButton.addEventListener('click', () => {
       console.error('Error loading more items:', error);
     });
 });
+document.querySelectorAll('.cat').forEach(function (button) {
+  button.addEventListener('click', function () {
+    const categoryFilter = button.getAttribute('data-category');
+    const itemContainer = document.getElementById('item-container');
+    const items = Array.from(itemContainer.querySelectorAll('.product-container'));
 
+    const filteredItems = items.filter(item => {
+      const itemCategory = item.querySelector('li:last-child').textContent;
+      return itemCategory === categoryFilter;
+    });
 
-
-// // Helper function to create an item element
-// function createItemElement(item) {
-//   const itemDiv = document.createElement('div');
-//   itemDiv.className = 'product-container col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center';
-
-//   itemDiv.innerHTML = `
-//   <div class="product-container col-lg-3 col-md-6 col-sm-12 d-flex flex-column align-items-center">
-//     <img src="{{this.image_url}}" />
-//     <div class="d-flex flex-column align-items-center">
-//       <ul>
-//         <li>{{this.name}}</li>
-//         <li>{{this.price}}</li>
-//         {{#if this.user}}
-//         <li>Added by: {{this.user.name}}</li>
-//         {{/if}}
-//       </ul>
-//     </div>
-//     <button class="add-to-cart-button" data-name="{{this.name}}" data-img="{{this.image_url}}"
-//       data-price="{{this.price}}">Add To Cart</button>
-//   </div>
-//   `;
-
-//   return itemDiv;
-// }
+    itemContainer.innerHTML = '';
+    filteredItems.forEach((item) => {
+      itemContainer.appendChild(item);
+    });
+  });
+});

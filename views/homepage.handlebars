@@ -6,6 +6,16 @@
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
   </link>
 </aside> --}}
+<aside>
+  <button class="cat" data-category="Processors">Processors</button>
+  {{!-- <button class="cat" data-category="{{this.category}}">Processors2</button> --}}
+  <button class="cat" data-category="Motherboards">Motherboards</button>
+  <button class="cat" data-category="Graphics Cards">Graphics Cards</button>
+  <button class="cat" data-category="Monitors">Monitors</button>
+  <button class="cat" data-category="Computer Cases">Computer Cases</button>
+  <button class="cat" data-category="Memory">Memory</button>
+  <button class="cat" data-category="Fans and Cooling">Fans and Cooling</button>
+</aside>
 
 <main style="min-height: 85vh; flex: 1;">
   <div id="item-container" class="row mt-4 mr-0">
@@ -19,10 +29,12 @@
           {{#if this.user}}
           <li>Added by: {{this.user.name}}</li>
           {{/if}}
+          <li class="hidden">{{this.category}}</li>
         </ul>
       </div>
       <button class="add-to-cart-button" data-name="{{this.name}}" data-img="{{this.image_url}}"
         data-price="{{this.price}}">Add To Cart</button>
+      {{!-- <button class="cat" data-category="{{this.category}}">category</button> --}}
     </div>
     {{/each}}
   </div>

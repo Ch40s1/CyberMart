@@ -26,6 +26,9 @@ TechItems.init(
     description: {
       type: DataTypes.STRING,
     },
+    category:{
+      type: DataTypes.STRING,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
