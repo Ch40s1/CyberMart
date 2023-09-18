@@ -1,27 +1,43 @@
-<div>
-<h1 style="color: aliceblue;">Welcome: User</h1>
-</div>
-<section>
-  <div>
-    <button>Chnage Username </button>
-    <button>Chnage Password </button>
-    <button>Add Product </button>
-    <button>View Product </button>
+<section style="min-height: 88vh;">
+  <div class="container">
+    <section class="profile-section">
+      <div>
+        <h1>Welcome {{user_firstName}}</h1>
+      </div>
+      <section>
+        <div>
+          <h3>Name: {{user_firstName}}</h3>
+          <form>
+            <div class="mb-3">
+              <label for="nameInput" class="form-label">New Name</label>
+              <input type="text" class="form-control" id="nameInput">
+            </div>
+            <button type="submit" class="btn btn-primary">Change Name</button>
+          </form>
+        </div>
+        <div>
+          <h3>Username: {{user_name}}</h3>
+          <form>
+            <div class="mb-3">
+              <label for="usernameInput" class="form-label">New Username</label>
+              <input type="text" class="form-control" id="usernameInput">
+            </div>
+            <button type="submit" class="btn btn-primary">Change Username</button>
+          </form>
+        </div>
+        <div>
+          <h3>Password: *********</h3>
+          <form>
+            <div class="mb-3">
+              <label for="passwordInput" class="form-label">New Password</label>
+              <input type="password" class="form-control" id="passwordInput">
+            </div>
+            <button type="submit" class="btn btn-primary">Change Password</button>
+          </form>
+        </div>
+      </section>
+    </section>
   </div>
 </section>
-<br>
-<section>
-  <h1 style="color: aliceblue;">YOUR PRODUCTS</h1>
-  <div>
-    <img src="/img/tech.jpeg">
-    <h3 style="color: aliceblue;">Description:</h3>
-    <ul>
-      <li>
-        price: $$
-      </li>
-    </ul>
-    <p style="color: aliceblue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum accusantium
-      nobis quasi cumque aspernatur ea, dolor eligendi iure? Vero, molestias.</p>
-  </div>
-</section>
-{{!-- <script src="./js/profile.js"></script> --}}
+{{!--
+<script src="./js/profile.js"></script> --}}

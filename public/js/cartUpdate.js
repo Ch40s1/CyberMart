@@ -5,7 +5,6 @@ let cartContent = JSON.parse(localStorage.getItem('cart')) || [];
 function saveCartToLocalStorage() {
   localStorage.setItem('cart', JSON.stringify(cartContent));
 };
-
 document.querySelectorAll('.add-to-cart-button').forEach(function (button) {
   button.addEventListener('click', function () {
     const itemName = button.getAttribute('data-name');
@@ -29,40 +28,49 @@ document.getElementById('cart').addEventListener('click', function(){
 });
 
 function showCart() {
-
   const asideContainer = document.getElementById('section-container');
-  // asideContainer.innerHTML = ''; // Clear the existing content
-const cartContent = JSON.parse(localStorage.getItem('cart')) || [];
+  asideContainer.innerHTML = ''; // Clear the existing content
+  const cartContent = JSON.parse(localStorage.getItem('cart')) || [];
 
-cartContent.forEach(selectedItem => {
-  const cartSection = document.createElement('div')
-  cartSection.classList.add('cart-container');
+  cartContent.forEach(selectedItem => {
+    const cartSection = document.createElement('div');
+    cartSection.classList.add('cart-container');
 
-  const cartItemName = document.createElement('h3');
-  cartItemName.textContent = selectedItem.name;
+    const cartItemName = document.createElement('h3');
+    cartItemName.textContent = selectedItem.name;
 
-  const cartItemImage = document.createElement('img');
-  cartItemImage.src = selectedItem.image;
-  cartSection.appendChild(cartItemImage);
+    const cartItemImage = document.createElement('img');
+    cartItemImage.src = selectedItem.image;
+    cartSection.appendChild(cartItemImage);
 
-  const cartItemPrice = document.createElement('p');
-  cartItemPrice.textContent = `Price: $${selectedItem.price}`;
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', function () {
+      removeFromCart(selectedItem.name); // Pass the item name
+    });
 
-  cartSection.appendChild(cartItemName);
-  cartSection.appendChild(cartItemPrice);
-  asideContainer.appendChild(cartSection);
-});
+    const cartItemPrice = document.createElement('p');
+    cartItemPrice.textContent = `Price: $${selectedItem.price}`;
+
+    cartSection.appendChild(cartItemName);
+    cartSection.appendChild(deleteButton);
+    cartSection.appendChild(cartItemPrice);
+    asideContainer.appendChild(cartSection);
+  });
+
+  // Save the cart to local storage after updating the display
+  saveCartToLocalStorage();
 }
 
-function  updateCart(item) {
 
+function  updateCart(item) {
   const arrayItem = item;
   const index = cartContent.indexOf(arrayItem);
   console.log(index);
 
   const selectedItem = cartContent[index]
   const asideContainer = document.getElementById('section-container');
-
+  asideContainer.innerHTML = '';
   const cartSection = document.createElement('div')
   cartSection.classList.add('cart-container');
 
@@ -74,11 +82,10 @@ function  updateCart(item) {
   cartSection.appendChild(cartItemImage);
 
 
-  // Create a delete button
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete';
   deleteButton.addEventListener('click', function () {
-    removeFromCart(selectedItem);
+    removeFromCart(selectedItem.name); // Pass the item name
   });
 
   const cartItemPrice = document.createElement('p');
@@ -142,8 +149,8 @@ function updateTotalPrice(){
 
 }
 
-function removeFromCart(item) {
-  const index = cartContent.indexOf(item);
+function removeFromCart(itemName) {
+  const index = cartContent.findIndex(item => item.name === itemName);
   if (index !== -1) {
     cartContent.splice(index, 1);
     updateCartDisplay();
@@ -158,6 +165,19 @@ function updateCartDisplay() {
     updateCart(item);
   });
 }
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   if (window.location.pathname === '/checkout') {
+//     updateCheckout();
+//     updateTotalPrice();
+//   }
+// });
+
+// // Event listener for the cart button
+// document.getElementById('cart').addEventListener('click', function () {
+//   showCart();
+// });
+
 
 
 updateCheckout();
