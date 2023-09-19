@@ -27,6 +27,7 @@ loadMoreButton.addEventListener('click', () => {
       if (tempDiv.querySelector('#load-more').style.display === 'none') {
         loadMoreButton.style.display = 'none'; // Hide the button
       }
+
     })
     .catch((error) => {
       console.error('Error loading more items:', error);

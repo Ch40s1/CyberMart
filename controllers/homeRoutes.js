@@ -19,6 +19,9 @@ router.get('/', async (req, res) => {
 
     const techItems = techItemData.map((techItem) => techItem.get({ plain: true }));
 
+// techItems.sort(function(a,b){
+// return parseFloat(a.category) - parseFloat(b.category)
+// })
     res.render('homepage', {
       techItems,
       logged_in: req.session.logged_in,
