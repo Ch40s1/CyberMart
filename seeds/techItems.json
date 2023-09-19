@@ -39,14 +39,14 @@
     "price": "169.99",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/52ee465cbd64b16145232d863524c066.256p.jpg",
     "description": "Description for PC Part 2",
-    "category": "Processors"
+    "category":  "Motherboards"
   },
   {
     "name": "Gigabyte B650 AORUS ELITE AX",
     "price": "199.00",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/322a6059c413dd736536e5ad5c3a2285.256p.jpg",
     "description": "Description for PC Part 3",
-    "category": "Processors"
+    "category":  "Motherboards"
   },
   {
     "name": "MSI B550 GAMING GEN3",
@@ -74,35 +74,36 @@
     "price": "289.99",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/dbc81b89efc82ce66fb2e3ab7e0f0658.256p.jpg",
     "description": "Description for PC Part 7",
-    "category": "Fans and Cooling"
+    "category": "CPU"
   },
   {
     "name": "Gigabyte WINDFORCE OC",
     "price": "549.99",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/772cce097c55469671a0d75ea4aca83a.256p.jpg",
     "description": "Description for PC Part 8",
-    "category": "Fans and Cooling"
+    "category": "CPU"
   },
   {
     "name": "MSI RTX 3060 Ventus 3X 12G OC",
     "price": "299.99",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/24f2250843caa631f82d234bc781e9d0.256p.jpg",
     "description": "Description for PC Part 9",
-    "category": "Fans and Cooling"
+    "category": "CPU"
+
   },
   {
     "name": "Asus ROG STRIX GAMING OC",
     "price": "2009.98",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/9f7b45a2816c45ea9449e8ca2bf6f616.256p.jpg",
     "description": "Description for PC Part 10",
-    "category": "Monitors"
+    "category": "CPU"
   },
   {
     "name": "Asus TUF GAMING OC",
     "price": "348.36",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/715f2901c5912c64e515a0a82226d20e.256p.jpg",
     "description": "Description for PC Part 11",
-    "category": "Monitors"
+    "category": "CPU"
   },
   {
     "name": "Asus TUF Gaming VG27AQ",
@@ -179,35 +180,35 @@
     "price": "39.99",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/835ab3efad1be13bbe53beef3e3c6f96.256p.jpg",
     "description": "Description for PC Part 22",
-    "category": "Memory"
+    "category": "RAM"
   },
   {
     "name": "Corsair Vengeance 32 GB",
     "price": "94.95",
     "image_url": "https://m.media-amazon.com/images/I/41jJSPS8W7L.jpg",
     "description": "Description for PC Part 23",
-    "category": "Memory"
+    "category": "RAM"
   },
   {
     "name": "Corsair Vengeance RGB Pro 32 GB",
     "price": "94.99",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/5f09867b54e9ad932b4dd1bc767f6238.256p.jpg",
     "description": "Description for PC Part 24",
-    "category": "Memory"
+    "category": "RAM"
   },
   {
     "name": "Corsair Vengeance LPX 32 GB",
     "price": "69.98",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/11742fd6eec55fde4e3ee3a79529a111.256p.jpg",
     "description": "Description for PC Part 25",
-    "category": "Memory"
+    "category": "RAM"
   },
   {
     "name": "G.Skill Trident Z5 RGB 32 GB",
     "price": "69.98",
     "image_url": "https://cdna.pcpartpicker.com/static/forever/images/product/e8d573bd2eac864d427645f0d2f7cad8.256p.jpg",
     "description": "Description for PC Part 26",
-    "category": "Memory"
+    "category":"RAM"
   },
   {
     "name": "Cooler Master Hyper 212 Black Edition",
