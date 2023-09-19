@@ -177,5 +177,10 @@ span{
   font-size: 1.5rem;
   margin-top: auto; /* Push the footer to the bottom */
   margin-bottom: 0;
-  /* Add any additional styles for your footer here */
+}
+#filter-btns{
+  background-color: var(--background-color-primary);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }

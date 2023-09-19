@@ -55,8 +55,3 @@ sequelize.sync({ force: true }).then(async () => {
     http://localhost:${PORT}/`);
   })
 });
-// app.listen(PORT, ()=>{
-//   console.log(
-//   `Now listening:Click this Link =>
-//   http://localhost:${PORT}/`);
-// })
